@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>JavaScript - String Extensions</title>
+	<script type="text/javascript" src="Functions.js"></script>
+	<script type="text/javascript" src="StringExtensions.js"></script>
+
+</head>
+<body>
+
+	<h1>JavaScript - String Extensions</h1>
+
+	<script type="text/javascript">
+		function validateString()
+		{
+			var value1 = getID("txtcompare1").value;
+			var value2 = getID("txtcompare2").value;
+			alert(value1.equals(value2))
+		}
+
+		
+	</script>
+	<div>
+		value 1: <input type="text" id="txtcompare1" >
+		value 2: <input type="text" id="txtcompare2" >
+		<button type="button" onclick="validateString()">Compare String</button>
+	</div>
+
+	<br>
+
+	<script type="text/javascript">
+		function trimText(type)
+		{
+			var value1 = getID("txttrim").value;
+			if(type.equals("1")) alert("."+value1.trim()+".");
+			if(type.equals("2")) alert("."+value1.rtrim()+".");
+			if(type.equals("3")) alert("."+value1.ltrim()+".");
+			if(type.equals("4")) alert("."+value1.ftrim()+".");
+		}
+	</script>
+	<div>
+		value: <input type="text" id="txttrim" >
+		<button type="button" onclick="trimText('1')">Trim String</button>
+		<button type="button" onclick="trimText('2')">Right Trim String</button>
+		<button type="button" onclick="trimText('3')">Left Trim String</button>
+		<button type="button" onclick="trimText('4')">Full Trim String</button>
+	</div>
+
+	<script type="text/javascript">
+		function isNumeric(type)
+		{
+			var value1 = getID("txtnumeric").value;
+			alert(value1.IsNumeric());
+		}
+		function intparse()
+		{
+			var value1 = getID("txtnumeric").value;
+			alert(int.Parse(value1));
+		}
+	</script>
+	<div>
+		value: <input type="text" id="txtnumeric" >
+		<button type="button" onclick="isNumeric()">Is Numeric</button>
+		<button type="button" onclick="intparse()">int.Parse</button>
+	</div>
+</body>
+</html>
