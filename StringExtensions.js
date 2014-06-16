@@ -56,3 +56,46 @@ String.prototype.toInt = function(){
 	return parseInt(this, 10);
 }
 
+/*
+ * Funcionalidades para Number
+ */
+
+/*
+ * Devuelve un valor booleano que indica si el numero entero es un numero impar.
+ * @return boolean
+ */
+String.prototype.IsOdd = function () {
+	i = this.toInt();
+    return (i % 2) != 0;
+}
+
+/*
+ * Devuelve un valor booleano que indica si el numero entero es un numero par.
+ * @return boolean
+ */
+String.prototype.IsEven = function () {
+	i = this.toInt();
+    return (i % 2) == 0;
+}
+
+/*
+ * Devuelve un valor booleano que indica que el número entero esta entre los valores low y high especificados.
+ * @param Int, Int
+ * @return boolean
+ */
+String.prototype.Between = function (low, high) {
+	i = this.toInt();
+	return i > low && i < high;
+}
+
+/*
+ * Devuelve un valor booleano que indica que el número entero es "mayor" al valor iCompare especificado.
+ * @param Int
+ * @return boolean
+ */
+Number.prototype.IsGreater = function (iCompare) {
+	i = this.toInt();
+    return i > iCompare;
+}
+
+
