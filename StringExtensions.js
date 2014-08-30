@@ -93,9 +93,38 @@ String.prototype.Between = function (low, high) {
  * @param Int
  * @return boolean
  */
-Number.prototype.IsGreater = function (iCompare) {
+String.prototype.IsGreater = function (iCompare) {
 	i = this.toInt();
     return i > iCompare;
 }
 
+/*
+ * Devuelve un valor booleano que indica que el número entero es "mayor" o "igual" al valor iCompare especificado.
+ * @param Int
+ * @return boolean
+ */
+String.prototype.IsGreaterOrEqual = function (iCompare) {
+	i = this.toInt();
+    return i >= iCompare;
+}
+
+/*
+ * Devuelve un valor booleano que indica que el número entero es "inferior" al valor iCompare especificado.
+ * @param Int
+ * @return boolean
+ */
+String.prototype.IsLower = function (iCompare) {
+	i = this.toInt();
+    return i < iCompare;
+}
+
+/*
+ * Devuelve un valor booleano que indica que el número entero es "inferior" o "igual" al valor iCompare especificado.
+ * @param Int
+ * @return boolean
+ */
+String.prototype.IsLowerOrEqual = function (iCompare) {
+	i = this.toInt();
+    return i <= iCompare;
+}
 
